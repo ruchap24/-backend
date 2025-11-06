@@ -15,7 +15,6 @@ export class ExperienceService {
       throw new NotFoundException('Profile not found');
     }
 
-    // Convert date strings to Date objects
     const data = {
       ...createExperienceDto,
       startDate: new Date(createExperienceDto.startDate),
@@ -59,7 +58,7 @@ export class ExperienceService {
       data,
     });
   }
-
+  
   async delete(userId: string, experienceId: string) {
     const profile = await this.prisma.profile.findUnique({
       where: { userId },
