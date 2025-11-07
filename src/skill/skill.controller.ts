@@ -16,6 +16,6 @@ export class SkillController {
 
   @Delete(':id')
   delete(@Req() req: any, @Param('id') id: string) {
-    return this.skillService.delete(id, req.user);
+    return this.skillService.delete(id, req.user.id);
   }
 }
