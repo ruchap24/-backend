@@ -22,7 +22,7 @@
     "prisma:seed": "ts-node prisma/seed.ts",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
-     "postinstall": "prisma generate"
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
@@ -32,7 +32,6 @@
     "@nestjs/passport": "^11.0.5",
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/swagger": "^11.2.1",
-    "@prisma/client": "^6.19.0",
     "bcrypt": "^6.0.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.2",
@@ -47,6 +46,7 @@
     "@nestjs/cli": "^11.0.0",
     "@nestjs/schematics": "^11.0.0",
     "@nestjs/testing": "^11.0.1",
+    "@prisma/client": "^6.19.0",
     "@types/bcrypt": "^6.0.0",
     "@types/express": "^5.0.0",
     "@types/jest": "^30.0.0",
@@ -59,6 +59,7 @@
     "globals": "^16.0.0",
     "jest": "^30.0.0",
     "prettier": "^3.4.2",
+    "prisma": "^6.19.0",
     "source-map-support": "^0.5.21",
     "supertest": "^7.0.0",
     "ts-jest": "^29.2.5",
@@ -87,5 +88,9 @@
   },
   "prisma": {
     "schema": "prisma/schema.prisma"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
   }
 }
