@@ -6,14 +6,13 @@ const prisma = new PrismaClient();
 async function main() {
   console.log(' Starting seed...');
 
-  // Clear existing data
   await prisma.skill.deleteMany();
   await prisma.experience.deleteMany();
   await prisma.education.deleteMany();
   await prisma.profile.deleteMany();
   await prisma.user.deleteMany();
 
-  // Create dummy users with profiles
+
   const hashedPassword = await bcrypt.hash('password123', 10);
 
   const users = [
