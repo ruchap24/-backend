@@ -20,7 +20,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'http://localhost:3000',
-      'https://your-app-name.vercel.app',
+      'https://i2interfaces.vercel.app/',
       /\.vercel\.app$/,
     ],
     credentials: true,
