@@ -59,7 +59,7 @@ export class ExperienceService {
     });
   }
   
-  async delete(userId: string, experienceId: string) {
+  async delete(experienceId: string, userId: string) {
     const profile = await this.prisma.profile.findUnique({
       where: { userId },
     });
@@ -69,7 +69,10 @@ export class ExperienceService {
     }
 
     const experience = await this.prisma.experience.findFirst({
-      where: { id: experienceId, profileId: profile.id },
+      where: {
+        id: experienceId,
+        profileId: profile.id,
+      },
     });
 
     if (!experience) {

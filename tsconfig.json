@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "es2022",
     "moduleResolution": "node",
-    "ignoreDeprecations": "5.0",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
@@ -12,13 +11,12 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": false
   },
   "include": ["src/**/*"],
